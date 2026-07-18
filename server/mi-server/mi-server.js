@@ -4,14 +4,14 @@ const axios = require('axios');
 
 
 
-// . Le damos permiso a React para entrar
+//    . Le damos permiso a React para entrar
 const app = express();
 const PORT = 4000;
 
 // . Le damos permiso a React para entrar
 app.use(cors());
 
-app.get('/market/all', async (req, res) => {
+ app.get('/market/all', async (req, res) => {
     try {
         console.log(`📩 Petición: Listado para Sidebar`);
         const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false`;
